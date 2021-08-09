@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TestTools;
 
-public class ScriptPerformancePrebuildStep : MonoBehaviour
+namespace Benchmark.Prebuild
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ScriptPerformancePrebuildStep : MonoBehaviour, IPrebuildSetup
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Setup()
+        {
+            Debug.Log("IPrebuildSetup.Setup is called.");
+        }
     }
 }
